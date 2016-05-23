@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tareasModelStoreContainer" CdmEntityContainer="tareasEntities1">
+    <EntitySetMapping Name="tareas_crud">
+      <EntityTypeMapping TypeName="tareasModel.tareas_crud">
+        <MappingFragment StoreEntitySet="tareas_crud">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tecnico" ColumnName="tecnico" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="prioridad" ColumnName="prioridad" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
