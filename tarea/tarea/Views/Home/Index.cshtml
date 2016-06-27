@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var listItems = new string[] { "lista1", "lista2","lista3" };
+    var label = new string[] { "prueba Label" };
+    var texto = new string[] { "prueba texto" };
+    var chek = new string[] { "prueba chek" };
+    var textbox = new string[] { "prueba caja de texto" };
+
+}
+
+<div class="jumbotron">
+    <h1>Alvaro Chaverri</h1>
+  
+    <p class="lead">Tarea Helpers Desarrollo Web 2</p>
+    
+</div>
+
+@Html.List(listItems)
+<br />
+@Html.Label(label[0])
+<br />
+@Html.TextArea(texto[0])
+<br />
+@Html.CheckBox(chek[0])
+<br />
+@Html.TextBox(textbox[0])
+
+
+
+@*<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
