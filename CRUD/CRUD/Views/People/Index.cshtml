@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CRUD.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+<img src="http://www.goldminemag.com/wp-content/uploads/2010/09/portnoy1.jpg"></a>
+<h2>Curriculum</h2>
+<strong>Mike Portnoy</strong>
+<p>Analista y Programador en Test Consultores</p>
+<p>Costa Rica | Servicios y Tecnologías de la Información</p>
+<p>Actual | Test Data</p>
+<p>Anterior | Crux Consultores, Suplidora Internacional Royal</p>
+<p>Educación | Universidad De Costa Rica</p>
+<p>
+    @Html.ActionLink("Inserte sus Datos", "Create")
+</p>
+<table class="table">
+    @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Oficio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Experiencia)
+        </th>
+        <th></th>
+    </tr>*@
+
+@foreach (var item in Model)
+{
+   
+        <tr>
+
+            @Html.DisplayFor(modelItem => item.Oficio)
+            <br />
+
+            @Html.DisplayFor(modelItem => item.Empresa)
+
+            <br />
+            @Html.DisplayFor(modelItem => item.Experiencia)
+
+            <br />
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+
+        </tr>
+ 
+}
+
+</table>
