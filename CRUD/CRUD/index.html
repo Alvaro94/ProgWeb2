@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>quiz2</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <h2>Todos los productos</h2>
+        <ul>id="products"</ul>
+
+    </div>
+
+    <div>
+        <h2>buscar por id</h2>
+        <input type="text" id="id" size="5"/>
+        <input  type="button" value="search" onclick="find();"/>
+        <p>Id = "product"</p>
+    </div>
+
+    <script> src="http//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"</script>
+    <script>
+        var uri ='api/products';
+        $(document).ready(function(){
+
+            $.get.JSON(uri)
+            .done(function(data){
+
+
+                $.each(data, function(key, item){
+                    $('<li>',{text: formatItem(item)}).appendTo($('#products'));
+                }
+                });
+        });
+
+
+        function formatItem(item){
+            return item.name+ ': $'+ item.price;
+        }
+        function find(){
+            var id = $('#prodid').val();
+            $.getJSON(uri+'/'+id)
+            .done(function(data){
+
+                $('#product').text('error: '+err);
+
+            }
+        })
+    </script>
+
+</body>
+</html>
